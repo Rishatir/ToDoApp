@@ -18,7 +18,6 @@ export default function App() {
     setTaskItems(itemsCopy)
   }
 
-
   return (
     <View style={styles.container}>
       <ScrollView
