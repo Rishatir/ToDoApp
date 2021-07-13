@@ -6,10 +6,9 @@ const Task = (props) => {
     return (
         <View style={styles.item}>
             <View style={styles.itemLeft}>
-              <View style={styles.square}></View>
               <Text style={styles.itemText}>{props.text}</Text> 
             </View>
-            <View style={styles.circular}></View>
+            <Text style={styles.x} onPress={() => props.completeTask(props.index)}>X</Text>
         </View>
     )
 }
@@ -27,7 +26,8 @@ const styles = StyleSheet.create({
     itemLeft: {
         flexDirection: 'row',
         alignItems: 'center',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        width: '90%'
     },
     square: {
         width: 24,
@@ -38,14 +38,11 @@ const styles = StyleSheet.create({
         marginRight: 15,
     },
     itemText: {
-        maxWidth: '80%',
+        width: '90%',
     },
-    circular: {
-    width: 12,
-    height: 12,
-    borderColor: '#55BCF6',
-    borderWidth: 2,
-    borderRadius: 5,
+    x: {
+        padding: 5,
+        width: '10%'        
    },
 });
 
